@@ -2,9 +2,11 @@
 import random
 import time
 from typing import List, Dict, Tuple
+
 # ═══════════════════════════════════════════════════════════════════
 # SIMULADOR DO TESTE DE TURING
 # ═══════════════════════════════════════════════════════════════════
+
 print("="*70)
 print("TESTE DE TURING - SIMULADOR INTERATIVO")
 print("="*70)
@@ -12,6 +14,8 @@ print("\nHistória: Alan Turing (1950) propôs um teste para determinar")
 print("se uma máquina pode 'pensar'. Se um avaliador não conseguir")
 print("distinguir conversas entre humano e máquina, a máquina 'passa'.")
 print("="*70)
+
+
 class ChatbotSimples:
     """
     Chatbot simulado para Teste de Turing (IA)
@@ -285,8 +289,10 @@ class TestedeTuring:
 # ═══════════════════════════════════════════════════════════════════
 # EXECUÇÃO DO TESTE
 # ═══════════════════════════════════════════════════════════════════
+
 teste = TestedeTuring()
 teste.executar_conversa(num_rodadas=7)
+
 # Pedir palpite do usuário
 print(f"\n{'='*70}")
 print("MOMENTO DA VERDADE")
@@ -294,22 +300,26 @@ print(f"{'='*70}")
 print("\n Baseado nas conversas acima, qual seu palpite?")
 print("\nAgente A é: (1) Humano (2) IA")
 print("Agente B é: (1) Humano (2) IA")
+
 # Simulação do palpite (em produção, seria input())
 palpite_a = random.choice(["Humano", "IA"])
 palpite_b = "IA" if palpite_a == "Humano" else "Humano"
 print(f"\n Seu palpite:")
 print(f" Agente A: {palpite_a}")
 print(f" Agente B: {palpite_b}")
+
 # Revelar resultado real
 real_a, real_b = teste.revelar_resultado()
 print(f"\n RESPOSTA CORRETA:")
 print(f" Agente A: {real_a}")
 print(f" Agente B: {real_b}")
+
 # Verificar acerto
 acertou_a = (palpite_a == real_a)
 acertou_b = (palpite_b == real_b)
 acertos = acertou_a + acertou_b
 print(f"\n RESULTADO: {acertos}/2 acertos")
+
 # Interpretação do Teste de Turing
 print(f"\n{'='*70}")
 print("INTERPRETAÇÃO DO TESTE DE TURING")
@@ -331,11 +341,15 @@ elif acertos == 0:
     print(" → A IA conseguiu enganar completamente o avaliador")
     print(" → Você não conseguiu distinguir máquina de humano")
     print("\n Este é o objetivo: a IA imita tão bem que não é detectada!")
+
 # Análise
 teste.analisar_caracteristicas()
+
+
 # ═══════════════════════════════════════════════════════════════════
 # DISCUSSÃO SOBRE O TESTE DE TURING
 # ═══════════════════════════════════════════════════════════════════
+
 print(f"\n{'='*70}")
 print("DISCUSSÃO: O TESTE DE TURING AINDA É RELEVANTE?")
 print(f"{'='*70}")
