@@ -8,7 +8,7 @@ import numpy as np
 modelo = MobileNetV2(weights='imagenet')
 
 # OPÇÃO 1: Usar imagem local
-img = image.load_img('aula_1_ex8_python.jpg', target_size=(224, 224))
+img = image.load_img('ia_7_python.jpg', target_size=(224, 224))
 
 # OPÇÃO 2: Baixar imagem da internet (requer urllib e PIL)
 # from urllib.request import urlretrieve
